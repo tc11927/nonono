@@ -17,6 +17,17 @@ Make a VIP setting, and allow the user to type in an index that corresponds to t
 When VIP is not false, when the notify function is called, only the VIP will get notified. Everybody else will get console logged "sorry the store is not available today."
 */
 
+/* 
+NOTES:
+Work on normal stuff first.
+1) Work on registerusers. Reference notes taken. Ask "what is your age?" 
+2) Use > and < to use age ranges, can be done in RegisterUser. Reference old notes. Can toggle this in Function StartApp, no need for seperate function!
+
+Challenge 1:
+
+
+*/
+
 let registry = [];
 let settings = {
   alcohol: true,
@@ -28,19 +39,22 @@ function RegisterUser(){
   readline.question("What is your age?", _registry=>{
     if(_registry < 19) {
       console.log("You can't drink!")
+      StartApp();
     } else if(_registry > 19){
       console.log("drink away!");
+      StartApp();
     }
   })
 } else{
   console.log ("everyone is welcome!");
+  StartApp();
 }
 }
 
 //rename this to ToggleAlcohol
-function ToggleAlcohol(paramAge){
+function funtion80() {}
   
-}
+
 
 //rename this to NotifyAll
 function Function3(){
