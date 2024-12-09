@@ -12,6 +12,14 @@ Only add a color when the theme color is true otherwise console log that it's no
 When a color is toggled from true to false, also remove the color from userColors. You can do this by making a new array, then looping through userColors and only pushing the colors that are true into the new array. Then reassign the new array to userColors.
 */
 
+/* 
+NOTES:
+1) Add to let theme, add red, green, blue, yellow and orange
+2) Work on AddUserColor, this was done in your notes. Push the color to usercolors based on if it's a real color in let theme.
+3)Display the colors in usercolors
+4) Add toggling to each color (was done in past things, reference and copy paste as it should be the same but with the different colors)
+*/
+
 let userColors = [];
 let theme = {
   //the 5 color and their boolean value goes here
