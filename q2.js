@@ -20,6 +20,18 @@ CHALLENGE 2
 2) Make it that when you calculate points, you multiply the points to the length of the key. EG if "new" only has 1 point, then you will add 3 point to the total because "new" has 3 letters and 3*1 = 3. This is also why having more points in apocolypse will get you the most points because the word apocolypse is the longeest
 */
 
+/* 
+NOTES:
+Work on normal stuff first.
+1) Work on ShowStatus. Reference old notes. Can log things just using console.log(whatever let you have)!!!
+2) add to let badge, type in the modes with 0
+3) Add to the categories, use ++ for this to be done
+
+Challenge 1:
+
+
+*/
+
 let badge = {
   new: 0,
   easy:0,
