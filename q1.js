@@ -23,7 +23,8 @@ Work on normal stuff first.
 1) Work on registerusers. Reference notes taken. Ask "what is your age?" 
 2) Use > and < to use age ranges, can be done in RegisterUser. Reference old notes. Can toggle this in Function StartApp, no need for seperate function!
 
-Challenge 1:
+Challenge 2:
+I'm not sure how to do this, and I probably won't get it right. But, I think that you use !settings.vip =!settings.vip to do this. Then surround the registerUser with it to allow if VIP or not. I don't know how to make something specifically VIP :( but do it just like the alcohol setting.
 
 
 */
@@ -31,10 +32,12 @@ Challenge 1:
 let registry = [];
 let settings = {
   alcohol: true,
+  vip: false
 };
 
 //rename this to RegisterUser
 function RegisterUser(){
+  if(settings.vip === false) {
   if(settings.alcohol === true ) {
   readline.question("What is your age?", _registry=>{
     if(_registry < 19) {
@@ -44,11 +47,16 @@ function RegisterUser(){
       console.log("drink away!");
       StartApp();
     }
-  })
-} else{
+  })} else{
   console.log ("everyone is welcome!");
   StartApp();
 }
+
+} else {
+  console.log("Store is closed.");
+  StartApp();
+}
+
 }
 
 //rename this to ToggleAlcohol
@@ -61,6 +69,20 @@ function Function3(){
   //go through the array to notify everyone
 }
 
+
+function VIP()
+{ readline.question("What do you want to do with VIP? ", _command=>{ 
+  if(_command === "make vip")
+  { readline.question("Who is VIP?", _age =>{ 
+    settings.vip = !settings.vip 
+    console.log (`${_age} is now vip`); 
+    StartApp(); 
+  })
+ } else if(_command === "cancel vip") 
+  settings.vip = !settings.vip
+  StartApp(); 
+}) }
+
 function StartApp(){
   readline.question("What is your command? ", _command=>{
     if(_command === "quit"){
@@ -70,6 +92,8 @@ function StartApp(){
     } else if(_command ==="toggle alcohol"){
       settings.alcohol = !settings.alcohol
       StartApp();
+    } else if (_command ==="VIP"){
+      VIP();
     }
   })
 }
